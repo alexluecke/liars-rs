@@ -1,0 +1,11 @@
+[package]
+name = "liars"
+version = "0.0.1"
+authors = ["Alex Luecke <me@alexjl.com>"]
+
+[[bin]]
+name = "liars"
+path = "src/main.rs"
+
+[dependencies]
+rand = "*"
