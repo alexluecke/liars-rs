@@ -1,6 +1,5 @@
 extern crate rand;
 use rand::{thread_rng, Rng};
-use std::num::Float;
 use std::fmt;
 
 enum Type {
@@ -91,9 +90,9 @@ fn main() {
                     set_a.push(x); // push x first!
                     set_a.push(y);
                 }
-            }
-            (Some(x), _) => println!(""),
-            _ => println!("")
+            },
+            (Some(x), _) => println!("DM was {:?}", x),
+            (_, _) => println!("Oh no.")
         }
 
         count += 1;
@@ -145,7 +144,6 @@ fn main() {
 
     println!("\n--------------------------------------------------");
     println!("Set B");
-
     for person in set_b.iter() {
         match (*person).integrity {
             Type::Liar => println!("Liar"),
