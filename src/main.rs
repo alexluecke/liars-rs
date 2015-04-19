@@ -18,9 +18,8 @@ fn ask_if_liar(x: &Person, y: &Person) -> bool {
 }
 
 fn generate_random_person() -> Person {
-    let mut rng = thread_rng();
-    match *rng.choose(&[0, 1]).unwrap() {
-        0 => Person::Honest,
+    match generate_bool {
+        true => Person::Honest,
         _ => Person::Liar,
     }
 }
