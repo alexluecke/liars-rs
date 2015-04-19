@@ -79,6 +79,8 @@ fn main() {
             people.pop()
         };
 
+        // TODO: need to set the last remaining member of people as the distinguished member, if
+        // the case is reached
         match (x, y) {
             (Some(x), Some(y)) => {
                 if ask_if_liar(&x, &y) {
