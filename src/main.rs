@@ -26,11 +26,7 @@ fn generate_random_person() -> Person {
 }
 
 fn generate_bool() -> bool {
-    let mut rng = thread_rng();
-    match *rng.choose(&[true, false]).unwrap() {
-        true => true,
-        _ => false,
-    }
+    *thread_rng().choose(&[true, false]).unwrap()
 }
 
 fn main() {
